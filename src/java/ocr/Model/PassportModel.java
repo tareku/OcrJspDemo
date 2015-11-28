@@ -24,28 +24,27 @@ public class PassportModel {
     }
 
     //get image and converted to byte for further use
-    public void setImage(HttpServletRequest req, HttpServletResponse resp)
+    public byte[] setImage(HttpServletRequest request, HttpServletResponse response, byte[] passImg)
             throws ServletException, IOException {
         OutputStream oImage;
-//		r = m.isExist(req.getParameter("id"));
-//		try {
-//			if (r.next()) {
-//				byte barray[] = r.getBytes("pic");
-//				resp.setContentType("image/png");
-//				oImage = resp.getOutputStream();
-//				oImage.write(barray);
-//				oImage.flush();
-//				oImage.close();
-//			}
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
+        byte barray[] = passImg;
+//        response.setContentType("image/png");
+//        oImage = response.getOutputStream();
+//        oImage.write(barray);
+//        oImage.flush();
+//        oImage.close();
+        return barray;
+
     }
 
     //Return MRZ Document type(usually P, indicating a passport)
     public char getMrzDocType(String firstline) {
-        char doctype = firstline.charAt(0);
-        return doctype;
+        char dt = firstline.charAt(0);
+//        String doctype;
+//        if(dt == 'P') doctype = "Passsport";
+//        else doctype = "Unknown Document Type";
+//        return doctype;
+        return dt;
     }
 
     //Type (for countries that distinguish between different types of passports)
@@ -89,7 +88,7 @@ public class PassportModel {
         String year = birth.substring(0, 2);
         String month = birth.substring(2, 4);
         String day = birth.substring(4, 6);
-        String Birthday = day + " " + Months.values()[Integer.parseInt(month)-1] + " " + year;
+        String Birthday = day + " " + Months.values()[Integer.parseInt(month) - 1] + " " + year;
         return Birthday.trim();
     }
 
@@ -108,7 +107,7 @@ public class PassportModel {
         String year = exp.substring(0, 2);
         String month = exp.substring(2, 4);
         String day = exp.substring(4, 6);
-        exp = day + " " + Months.values()[Integer.parseInt(month)-1] + " " + year;
+        exp = day + " " + Months.values()[Integer.parseInt(month) - 1] + " " + year;
         return exp.trim();
     }
 

@@ -2,7 +2,6 @@ package ocr.Model;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.Image;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -12,23 +11,6 @@ import javax.imageio.ImageIO;
 public class OtsuBinarize {
 
     private static BufferedImage original, grayscale, binarized;
-
-    //Return path extension
-    public String getExtension(String path) {
-        String extension;
-        extension = path.substring(path.length() - 3, path.length());
-        return extension;
-    }
-
-    
-//    public BufferedImage ResizeImage(Image img, int width, int heigth) {
-//        BufferedImage resizedImage = new BufferedImage(width, heigth, BufferedImage.TYPE_INT_RGB);
-//        Graphics2D g2 = resizedImage.createGraphics();
-//        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-//        g2.drawImage(img, 0, 0, width, heigth, null);
-//        g2.dispose();
-//        return resizedImage;
-//    }
     
     //Resize image
     public BufferedImage ResizedImage(BufferedImage img, int width, int heigth) {
@@ -41,17 +23,12 @@ public class OtsuBinarize {
     }
 
     //Return binarize image
-    public String BinarizeImage(String path) throws IOException {
-
-        String extension = getExtension(path);
-        File original_f = new File(path);
-        String output_f = path + "_bin";
-        original = ImageIO.read(original_f);        
+    public BufferedImage BinarizeImage(BufferedImage path) throws IOException {
+        original = path;
         grayscale = toGray(original);
         binarized = binarize(grayscale);      
         binarized = ResizedImage(binarized, 1200, 760);
-        writeImage(output_f, extension);
-        return path + "_bin." + extension;
+        return binarized;
     }
 
     private static void writeImage(String output, String extension) throws IOException {

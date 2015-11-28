@@ -7,9 +7,17 @@
         <servlet-name>GetPassportData</servlet-name>
         <servlet-class>ocr.Controller.GetPassportData</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SetPassportImage</servlet-name>
+        <servlet-class>ocr.Controller.SetPassportImage</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GetPassportData</servlet-name>
         <url-pattern>/GetPassportData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SetPassportImage</servlet-name>
+        <url-pattern>/SetPassportImage</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

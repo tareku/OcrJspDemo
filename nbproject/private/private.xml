@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/java/ocr/Data/PassportDetail.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>0</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/TAREK/Documents/NetBeansProjects/OcrJspDemo/src/java/ocr/Model/OtsuBinarize.java</file>
             <file>file:/C:/Users/TAREK/Documents/NetBeansProjects/OcrJspDemo/web/index.jsp</file>
-            <file>file:/C:/Users/TAREK/Documents/NetBeansProjects/OcrJspDemo/web/output.jsp</file>
             <file>file:/C:/Users/TAREK/Documents/NetBeansProjects/OcrJspDemo/src/java/ocr/Model/PassportModel.java</file>
             <file>file:/C:/Users/TAREK/Documents/NetBeansProjects/OcrJspDemo/src/java/ocr/Data/PassportDetail.java</file>
+            <file>file:/C:/Users/TAREK/Documents/NetBeansProjects/OcrJspDemo/src/java/ocr/Controller/SetPassportImage.java</file>
             <file>file:/C:/Users/TAREK/Documents/NetBeansProjects/OcrJspDemo/src/java/ocr/Controller/GetPassportData.java</file>
             <file>file:/C:/Users/TAREK/Documents/NetBeansProjects/OcrJspDemo/src/java/ocr/Model/OcrModel.java</file>
         </group>

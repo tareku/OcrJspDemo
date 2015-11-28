@@ -2,11 +2,11 @@ package ocr.Data;
 
 public class PassportDetail {
 
-    String passportPath, mrz;
-    char doctype, type, passnumbercheckdigit, birthdaycheck, 
+    
+    char doctype, type, passnumbercheckdigit, birthdaycheck,
             sex, expirationdatecheck, personalnumbercheck, compositenumber;
-    String state, name, passnumber, nationality, birthday,
-            expirationdate, personalnumber;
+    String mrz = "", state, name = "", passnumber = "", nationality = "", birthday = "",
+            expirationdate = "", personalnumber = "";
     byte img[];
 
     public byte[] getImg() {
@@ -15,14 +15,6 @@ public class PassportDetail {
 
     public void setImg(byte[] img) {
         this.img = img;
-    }
-
-    public String getPassportPath() {
-        return passportPath;
-    }
-
-    public void setPassportPath(String passportPath) {
-        this.passportPath = passportPath;
     }
 
     public String getMrz() {
@@ -155,20 +147,20 @@ public class PassportDetail {
 
     @Override
     public String toString() {
-        return "Document Type: "+getDoctype()+"\n"
-                + "Type: "+getType()+"\n"
-                + "Issuing State: "+getState()+"\n"
-                + "Name: "+getName()+"\n"
-                + "Passport number: "+getPassnumber()+"\n"
-                + "Passport number check digit: "+getPassnumbercheckdigit()+"\n"
-                + "Nationality: "+getNationality()+"\n"
-                + "birthday: "+getBirthday()+"\n"
-                + "Birthday check number: "+getBirthdaycheck()+"\n"
-                + "Sex: "+getSex()+"\n"
-                + "Expiration date: "+getExpirationdate()+"\n"
-                + "Expiration date check: "+getExpirationdatecheck()+"\n"
-                + "Personal number: "+getPersonalnumber()+"\n"
-                + "Personal number check: "+getPersonalnumbercheck()+"\n"
-                + "Composide number: "+getCompositenumber()+"\n";
+        return "Document Type: " + getDoctype() + "\n"
+                + "Type: " + getType() + "\n"
+                + "Issuing State: " + getState() + "\n"
+                + "Name: " + getName() + "\n"
+                + "Passport number: " + getPassnumber() + "\n"
+                + "Passport number check digit: " + getPassnumbercheckdigit() + "\n"
+                + "Nationality: " + getNationality() + "\n"
+                + "birthday: " + getBirthday() + "\n"
+                + "Birthday check number: " + getBirthdaycheck() + "\n"
+                + "Sex: " + getSex() + "\n"
+                + "Expiration date: " + getExpirationdate() + "\n"
+                + "Expiration date check: " + getExpirationdatecheck() + "\n"
+                + "Personal number: " + getPersonalnumber() + "\n"
+                + "Personal number check: " + getPersonalnumbercheck() + "\n"
+                + "Composide number: " + getCompositenumber() + "\n";
     }
 }
