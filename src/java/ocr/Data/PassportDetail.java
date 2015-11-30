@@ -2,11 +2,11 @@ package ocr.Data;
 
 public class PassportDetail {
 
-    
-    char doctype, type, passnumbercheckdigit, birthdaycheck,
+    char doctypecode, type, passnumbercheckdigit, birthdaycheck,
             sex, expirationdatecheck, personalnumbercheck, compositenumber;
-    String mrz = "", state, name = "", passnumber = "", nationality = "", birthday = "",
-            expirationdate = "", personalnumber = "";
+    String mrz = "", doctypevalue = "", statecode = "", statevalue = "", namecode = "",
+            namevalue = "", passnumbercode = "", passnumbervalue = "", nationalitycode = "", nationalityvalue = "", birthdaycode = "", birthdayvalue = "",
+            sexvalue = "", expirationdatecode = "", expirationdatevalue = "", personalnumbercode = "", personalnumbervalue = "";
     byte img[];
 
     public byte[] getImg() {
@@ -17,20 +17,12 @@ public class PassportDetail {
         this.img = img;
     }
 
-    public String getMrz() {
-        return mrz;
+    public char getDoctypecode() {
+        return doctypecode;
     }
 
-    public void setMrz(String mrz) {
-        this.mrz = mrz;
-    }
-
-    public char getDoctype() {
-        return doctype;
-    }
-
-    public void setDoctype(char doctype) {
-        this.doctype = doctype;
+    public void setDoctypecode(char doctypecode) {
+        this.doctypecode = doctypecode;
     }
 
     public char getType() {
@@ -41,52 +33,12 @@ public class PassportDetail {
         this.type = type;
     }
 
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassnumber() {
-        return passnumber;
-    }
-
-    public void setPassnumber(String passnumber) {
-        this.passnumber = passnumber;
-    }
-
     public char getPassnumbercheckdigit() {
         return passnumbercheckdigit;
     }
 
     public void setPassnumbercheckdigit(char passnumbercheckdigit) {
         this.passnumbercheckdigit = passnumbercheckdigit;
-    }
-
-    public String getNationality() {
-        return nationality;
-    }
-
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
-    }
-
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
     }
 
     public char getBirthdaycheck() {
@@ -105,28 +57,12 @@ public class PassportDetail {
         this.sex = sex;
     }
 
-    public String getExpirationdate() {
-        return expirationdate;
-    }
-
-    public void setExpirationdate(String expirationdate) {
-        this.expirationdate = expirationdate;
-    }
-
     public char getExpirationdatecheck() {
         return expirationdatecheck;
     }
 
     public void setExpirationdatecheck(char expirationdatecheck) {
         this.expirationdatecheck = expirationdatecheck;
-    }
-
-    public String getPersonalnumber() {
-        return personalnumber;
-    }
-
-    public void setPersonalnumber(String personalnumber) {
-        this.personalnumber = personalnumber;
     }
 
     public char getPersonalnumbercheck() {
@@ -145,21 +81,157 @@ public class PassportDetail {
         this.compositenumber = compositenumber;
     }
 
+    public String getMrz() {
+        return mrz;
+    }
+
+    public void setMrz(String mrz) {
+        this.mrz = mrz;
+    }
+
+    public String getDoctypevalue() {
+        return doctypevalue;
+    }
+
+    public void setDoctypevalue(String doctypevalue) {
+        this.doctypevalue = doctypevalue;
+    }
+
+    public String getStatecode() {
+        return statecode;
+    }
+
+    public void setStatecode(String statecode) {
+        this.statecode = statecode;
+    }
+
+    public String getStatevalue() {
+        return statevalue;
+    }
+
+    public void setStatevalue(String statevalue) {
+        this.statevalue = statevalue;
+    }
+
+    public String getNamecode() {
+        return namecode;
+    }
+
+    public void setNamecode(String namecode) {
+        this.namecode = namecode;
+    }
+
+    public String getNamevalue() {
+        return namevalue;
+    }
+
+    public void setNamevalue(String namevalue) {
+        this.namevalue = namevalue;
+    }
+
+    public String getPassnumbercode() {
+        return passnumbercode;
+    }
+
+    public void setPassnumbercode(String passnumbercode) {
+        this.passnumbercode = passnumbercode;
+    }
+
+    public String getPassnumbervalue() {
+        return passnumbervalue;
+    }
+
+    public void setPassnumbervalue(String passnumbervalue) {
+        this.passnumbervalue = passnumbervalue;
+    }
+
+    public String getNationalitycode() {
+        return nationalitycode;
+    }
+
+    public void setNationalitycode(String nationalitycode) {
+        this.nationalitycode = nationalitycode;
+    }
+
+    public String getNationalityvalue() {
+        return nationalityvalue;
+    }
+
+    public void setNationalityvalue(String nationalityvalue) {
+        this.nationalityvalue = nationalityvalue;
+    }
+
+    public String getBirthdaycode() {
+        return birthdaycode;
+    }
+
+    public void setBirthdaycode(String birthdaycode) {
+        this.birthdaycode = birthdaycode;
+    }
+
+    public String getBirthdayvalue() {
+        return birthdayvalue;
+    }
+
+    public void setBirthdayvalue(String birthdayvalue) {
+        this.birthdayvalue = birthdayvalue;
+    }
+
+    public String getSexvalue() {
+        return sexvalue;
+    }
+
+    public void setSexvalue(String sexvalue) {
+        this.sexvalue = sexvalue;
+    }
+
+    public String getExpirationdatecode() {
+        return expirationdatecode;
+    }
+
+    public void setExpirationdatecode(String expirationdatecode) {
+        this.expirationdatecode = expirationdatecode;
+    }
+
+    public String getExpirationdatevalue() {
+        return expirationdatevalue;
+    }
+
+    public void setExpirationdatevalue(String expirationdatevalue) {
+        this.expirationdatevalue = expirationdatevalue;
+    }
+
+    public String getPersonalnumbercode() {
+        return personalnumbercode;
+    }
+
+    public void setPersonalnumbercode(String personalnumbercode) {
+        this.personalnumbercode = personalnumbercode;
+    }
+
+    public String getPersonalnumbervalue() {
+        return personalnumbervalue;
+    }
+
+    public void setPersonalnumbervalue(String personalnumbervalue) {
+        this.personalnumbervalue = personalnumbervalue;
+    }
+
     @Override
     public String toString() {
-        return "Document Type: " + getDoctype() + "\n"
+        return "Document Type: " + getDoctypevalue() + "\n"
                 + "Type: " + getType() + "\n"
-                + "Issuing State: " + getState() + "\n"
-                + "Name: " + getName() + "\n"
-                + "Passport number: " + getPassnumber() + "\n"
+                + "Issuing State: " + getStatevalue() + "\n"
+                + "Name: " + getNamevalue() + "\n"
+                + "Passport number: " + getPassnumbervalue()+ "\n"
                 + "Passport number check digit: " + getPassnumbercheckdigit() + "\n"
-                + "Nationality: " + getNationality() + "\n"
-                + "birthday: " + getBirthday() + "\n"
+                + "Nationality: " + getNationalityvalue() + "\n"
+                + "birthday: " + getBirthdayvalue() + "\n"
                 + "Birthday check number: " + getBirthdaycheck() + "\n"
                 + "Sex: " + getSex() + "\n"
-                + "Expiration date: " + getExpirationdate() + "\n"
+                + "Expiration date: " + getExpirationdatevalue() + "\n"
                 + "Expiration date check: " + getExpirationdatecheck() + "\n"
-                + "Personal number: " + getPersonalnumber() + "\n"
+                + "Personal number: " + getPersonalnumbervalue() + "\n"
                 + "Personal number check: " + getPersonalnumbercheck() + "\n"
                 + "Composide number: " + getCompositenumber() + "\n";
     }

@@ -1,5 +1,6 @@
 package ocr.Model;
 
+import com.neovisionaries.i18n.CountryCode;
 import java.io.IOException;
 import java.io.OutputStream;
 import javax.servlet.ServletException;
@@ -37,13 +38,17 @@ public class PassportModel {
 
     }
 
+    //Return MRZ Document type(usually Passport, or Unknown Document Type)
+    public String getMrzDocTypeValue(char dt) {        
+        String doctype;
+        if(dt == 'P') doctype = "Passsport";
+        else doctype = "Unknown Document Type";
+        return doctype; 
+    }
+    
     //Return MRZ Document type(usually P, indicating a passport)
-    public char getMrzDocType(String firstline) {
+    public char getMrzDocTypeCode(String firstline) {
         char dt = firstline.charAt(0);
-//        String doctype;
-//        if(dt == 'P') doctype = "Passsport";
-//        else doctype = "Unknown Document Type";
-//        return doctype;
         return dt;
     }
 
@@ -54,20 +59,36 @@ public class PassportModel {
     }
 
     //Issuing country or organization
-    public String getMrzState(String firstline) {
+    public String getMrzStateCode(String firstline) {
         String state = firstline.substring(2, 5);
         return state;
     }
+    
+    //Issuing country or organization value ISO 
+    public String getMrzStateValue(String state) {  
+        CountryCode code = CountryCode.getByCode(state);            
+        code.getName();
+        return code.getName();
+    }
 
     //Surname, followed by two filler characters, followed by given names
-    public String getMrzName(String firstline) {
+    public String getMrzNameCode(String firstline) {
         String name = firstline.substring(5, firstline.length());
+        return name;
+    }
+    //Surname, followed by given names, without filler characters
+    public String getMrzNameValue(String name) {        
         return name.replace("<", " ").trim();
     }
 
-    //Return Passport number
-    public String getMrzPassNumber(String secondline) {
+    //Return Passport number, followed by filler characters
+    public String getMrzPassNumberCode(String secondline) {
         String num = secondline.substring(0, 9);
+        return num;
+    }
+    
+    //Return Passport number, without filler characters
+    public String getMrzPassNumberValue(String num) {      
         return num.replace("<", "").trim();
     }
 
@@ -77,14 +98,31 @@ public class PassportModel {
     }
 
     //Return Nationality (ISO 3166-1 alpha-3 code with modifications)
-    public String getMrzNationality(String secondline) {
+    public String getMrzNationalityCode(String secondline) {
+        String nat = secondline.substring(10, 13);
+        return nat;
+    }
+    
+    //Return Nationality (ISO 3166-1 alpha-3 code with modifications)
+    public String getMrzNationalityValue(String secondline) {
         String nat = secondline.substring(10, 13);
         return nat;
     }
 
     //Return Date of birth (YYMMDD to DDMMYYY)
-    public String getMrzBirthday(String secondline) {
+    public String getMrzBirthdayCode(String secondline) {
         String birth = secondline.substring(13, 19);
+//        String year = birth.substring(0, 2);
+//        String month = birth.substring(2, 4);
+//        String day = birth.substring(4, 6);
+//        String Birthday = day + " " + Months.values()[Integer.parseInt(month) - 1] + " " + year;
+//        return Birthday.trim();
+        return birth;
+    }
+    
+    //Return Date of birth (YYMMDD to DDMMYYY)
+    public String getMrzBirthdayValue(String birth) {
+//        String birth = secondline.substring(13, 19);
         String year = birth.substring(0, 2);
         String month = birth.substring(2, 4);
         String day = birth.substring(4, 6);
@@ -97,13 +135,44 @@ public class PassportModel {
         return secondline.charAt(19);
     }
 
-    public char getMrzSex(String secondline) {
+    //Return Sex(M, F)
+    public char getMrzSexCode(String secondline) {
         return secondline.charAt(20);
+//        char s = secondline.charAt(20);
+//        String sex;
+//        if(s = 'M')
+//            sex = "Male":
+//        else if(s = 'F')
+//            sex = "Female";
+//        return sex;
+    }
+    
+    //Return Sex(M: Male, F: Female)
+    public String getMrzSexValue(char s) {
+//        return secondline.charAt(20);
+//        char s = secondline.charAt(20);
+        String sex = "";
+        if(s == 'M')
+            sex = "Male";
+        else if(s == 'F')
+            sex = "Female";
+        return sex;
     }
 
-    //Retrun Expiration date of passport (YYMMDD to DDMMYY)
-    public String getMrzExpirationDate(String secondline) {
+    //Retrun Expiration date of passport (YYMMDD)
+    public String getMrzExpirationDateCode(String secondline) {
         String exp = secondline.substring(21, 27);
+//        String year = exp.substring(0, 2);
+//        String month = exp.substring(2, 4);
+//        String day = exp.substring(4, 6);
+//        exp = day + " " + Months.values()[Integer.parseInt(month) - 1] + " " + year;
+//        return exp.trim();
+        return exp;
+    }
+    
+     //Retrun Expiration date of passport (YYMMDD to DDMMYY)
+    public String getMrzExpirationDateValue(String exp) {
+//        String exp = secondline.substring(21, 27);
         String year = exp.substring(0, 2);
         String month = exp.substring(2, 4);
         String day = exp.substring(4, 6);
@@ -117,8 +186,14 @@ public class PassportModel {
     }
 
     //Return Personal number (may be used by the issuing country as it desires)
-    public String getMrzPersonalNumber(String secondline) {
+    public String getMrzPersonalNumberCode(String secondline) {
         String num = secondline.substring(28, 42);
+        return num;
+    }
+    
+    //Return Personal number (may be used by the issuing country as it desires)
+    public String getMrzPersonalNumberValue(String num) {
+//        String num = secondline.substring(28, 42);
         return num.replace("<", " ");
     }
 

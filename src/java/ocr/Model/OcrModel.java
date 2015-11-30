@@ -30,7 +30,11 @@ public class OcrModel {
         try {
 //            
 //            instance.setDatapath("C:\\Users\\TAREK\\Documents\\NetBeansProjects\\OcrJspDemo\\tessdata");
-            instance.setDatapath("C:\\Users\\TAREK\\Documents\\NetBeansProjects\\OcrJspDemo\\src\\java\\tessdata");
+//            C:\\Users\\TAREK\\Documents\\NetBeansProjects\\OcrJspDemo\\src\\java\\tessdata
+//            C:\\Users\\TAREK\\Documents\\NetBeansProjects\\OcrJspDemo\\tessdata
+//            C:\\Users\\TAREK\\Documents\\NetBeansProjects\\OcrJspDemo\\src
+//            instance.setDatapath("C:\\Users\\TAREK\\Documents\\NetBeansProjects\\OcrJspDemo\\src\\java\\tessdata");
+            instance.setDatapath("C:\\Tessreact\\tessdata");
             ocrresult = instance.doOCR(convertedimg);
             mrz = ocrresult.substring(ocrresult.indexOf("P<"), ocrresult.length());
         } catch (TesseractException e) {

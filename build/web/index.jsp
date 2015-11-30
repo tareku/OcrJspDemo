@@ -49,80 +49,84 @@
                         <tr>                                
                             <th>Data Element</th>
                             <th>Value</th>
-                            <!--<th>Code</th>-->
+                            <th>Code</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody>                        
                         <tr>                                
                             <td>Document Type</td>
-                            <td><jsp:getProperty property="doctype" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="doctype" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="doctypevalue" name="PassportDetail"/></td>
+                            <td><jsp:getProperty property="doctypecode" name="PassportDetail"/></td>
+                        </tr>
+                        <tr>                                
+                            <td>Issuing State</td>
+                            <td><jsp:getProperty property="statevalue" name="PassportDetail"/></td>
+                            <td><jsp:getProperty property="statecode" name="PassportDetail"/></td>
                         </tr>
                         <tr>
-
                             <td>Type</td>
                             <td><jsp:getProperty property="type" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="type" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="type" name="PassportDetail"/></td>
                         </tr>
                         <tr>                               
                             <td>Name</td>
-                            <td><jsp:getProperty property="name" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="name" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="namevalue" name="PassportDetail"/></td>
+                            <td><jsp:getProperty property="namecode" name="PassportDetail"/></td>
                         </tr>
                         <tr>                               
                             <td>Passport Number</td>
-                            <td><jsp:getProperty property="passnumber" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="passnumber" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="passnumbercode" name="PassportDetail"/></td>
+                            <td><jsp:getProperty property="passnumbercode" name="PassportDetail"/></td>
                         </tr>
                         <tr>                               
                             <td>Passport Number Check Digit</td>
                             <td><jsp:getProperty property="passnumbercheckdigit" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="passnumbercheckdigit" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="passnumbercheckdigit" name="PassportDetail"/></td>
                         </tr>
                         <tr>                               
                             <td>Nationality</td>
-                            <td><jsp:getProperty property="nationality" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="nationality" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="nationalityvalue" name="PassportDetail"/></td>
+                            <td><jsp:getProperty property="nationalitycode" name="PassportDetail"/></td>
                         </tr>
                         <tr>                               
                             <td>Date of Birth</td>
-                            <td><jsp:getProperty property="birthday" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="birthday" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="birthdayvalue" name="PassportDetail"/></td>
+                            <td><jsp:getProperty property="birthdaycode" name="PassportDetail"/></td>
                         </tr>
                         <tr>                               
                             <td>Date of Birth Check Digit</td>
                             <td><jsp:getProperty property="birthdaycheck" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="birthdaycheck" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="birthdaycheck" name="PassportDetail"/></td>
                         </tr>                        
                         <tr>                               
                             <td>Sex</td>
+                            <td><jsp:getProperty property="sexvalue" name="PassportDetail"/></td>
                             <td><jsp:getProperty property="sex" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="sex" name="PassportDetail"/></td>-->
                         </tr>
                         <tr>                               
                             <td>Date of Expiry</td>
-                            <td><jsp:getProperty property="expirationdate" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="expirationdate" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="expirationdatevalue" name="PassportDetail"/></td>
+                            <td><jsp:getProperty property="expirationdatecode" name="PassportDetail"/></td>
                         </tr>
                         <tr>                               
                             <td>Date of Expiry Check Digit</td>
                             <td><jsp:getProperty property="expirationdatecheck" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="expirationdatecheck" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="expirationdatecheck" name="PassportDetail"/></td>
                         </tr>
                         <tr>                               
                             <td>Personal Number</td>
-                            <td><jsp:getProperty property="personalnumber" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="personalnumber" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="personalnumbervalue" name="PassportDetail"/></td>
+                            <td><jsp:getProperty property="personalnumbercode" name="PassportDetail"/></td>
                         </tr>
                         <tr>                               
                             <td>Personal Number Check Digit</td>
                             <td><jsp:getProperty property="personalnumbercheck" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="personalnumbercheck" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="personalnumbercheck" name="PassportDetail"/></td>
                         </tr>
                         <tr>                               
                             <td>Composite Number Check Digit</td>
                             <td><jsp:getProperty property="compositenumber" name="PassportDetail"/></td>
-                            <!--<td><jsp:getProperty property="compositenumber" name="PassportDetail"/></td>-->
+                            <td><jsp:getProperty property="compositenumber" name="PassportDetail"/></td>
                         </tr>                       
                     </tbody>
                 </table>                
