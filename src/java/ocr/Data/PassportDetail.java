@@ -219,19 +219,19 @@ public class PassportDetail {
 
     @Override
     public String toString() {
-        return "Document Type: " + getDoctypevalue() + "\n"
+        return "Document Type: " + getDoctypecode()+ "\n"
                 + "Type: " + getType() + "\n"
-                + "Issuing State: " + getStatevalue() + "\n"
-                + "Name: " + getNamevalue() + "\n"
-                + "Passport number: " + getPassnumbervalue()+ "\n"
+                + "Issuing State: " + getStatecode()+ "\n"
+                + "Name: " + getNamecode()+ "\n"
+                + "Passport number: " + getPassnumbercode()+ "\n"
                 + "Passport number check digit: " + getPassnumbercheckdigit() + "\n"
-                + "Nationality: " + getNationalityvalue() + "\n"
-                + "birthday: " + getBirthdayvalue() + "\n"
+                + "Nationality: " + getNationalitycode()+ "\n"
+                + "birthday: " + getBirthdaycode()+ "\n"
                 + "Birthday check number: " + getBirthdaycheck() + "\n"
                 + "Sex: " + getSex() + "\n"
-                + "Expiration date: " + getExpirationdatevalue() + "\n"
+                + "Expiration date: " + getExpirationdatecode()+ "\n"
                 + "Expiration date check: " + getExpirationdatecheck() + "\n"
-                + "Personal number: " + getPersonalnumbervalue() + "\n"
+                + "Personal number: " + getPersonalnumbercode()+ "\n"
                 + "Personal number check: " + getPersonalnumbercheck() + "\n"
                 + "Composide number: " + getCompositenumber() + "\n";
     }

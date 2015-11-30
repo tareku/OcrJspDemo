@@ -25,6 +25,7 @@ public class OtsuBinarize {
     //Return binarize image
     public BufferedImage BinarizeImage(BufferedImage path) throws IOException {
         original = path;
+        original = ResizedImage(original, 1200, 760);
         grayscale = toGray(original);
         binarized = binarize(grayscale);      
         binarized = ResizedImage(binarized, 1200, 760);

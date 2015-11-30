@@ -26,8 +26,8 @@ import org.apache.commons.io.FilenameUtils;
 
 public class GetPassportData extends HttpServlet {
 
-    String saveFile = "C:\\Users\\" + System.getProperty("user.name") + "\\Documents";
-//    String saveFile = "C:\\tmp";
+//    String saveFile = "C:\\Users\\" + System.getProperty("user.name") + "\\Documents";
+    String saveFile = "C:\\Tessreact";
 //      String saveFile = "C:\\Users\\" + System.getProperty("user.name") + "\\Documents\\NetBeansProjects\\OcrJspDemo\\src\\java\\temporaryImage";
 //    String saveFile = "C:\\Users\\TAREK\\Documents\\NetBeansProjects\\OcrJspDemo\\src\\java\\temporaryImage";
 
@@ -89,8 +89,7 @@ public class GetPassportData extends HttpServlet {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
-        System.out.println("bye jsp post");
+        }        
     }
 
     private File CreateTemporaryImage(String filename) {
